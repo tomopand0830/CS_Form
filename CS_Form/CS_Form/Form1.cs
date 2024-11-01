@@ -13,11 +13,26 @@ namespace CS_Form
     public partial class Form1 : Form
     {
         public Form1()
-        {
-            InitializeComponent();
-            TestButton testButton = new TestButton();
 
-            Controls.Add(testButton);
+        {
+            //int i;
+            // for(i = 0; i < 10; i++)
+            //{   
+            //      InitializeComponent();
+            //    TestButton testButtoni = new TestButton(i, 100, 50, 50);
+
+            //  Controls.Add(testButtoni);
+
+            //}
+            int i;
+            InitializeComponent();
+            for (i = 0;i < 10; i++)
+            {
+               
+                TestButton testButtoni = new TestButton(i*100, 0, 100, 100);
+
+                  Controls.Add(testButtoni);
+            }
         }
     }
 }
