@@ -12,6 +12,7 @@ namespace CS_Form
 {
     public partial class Form1 : Form
     {
+        TestLabel _testlabel;
         public Form1()
 
         {
@@ -25,22 +26,27 @@ namespace CS_Form
 
             //}
             int i;
+           
             InitializeComponent();
             for (i = 0;i < 10; i++)
             {
                
-                TestButton testButtoni = new TestButton(i,(i%5)*100,(i/5)*100,100, 100);
-
+                TestButton testButtoni = new TestButton(this,i,(i%5)*100,(i/5)*100,100, 100);
+                
                   Controls.Add(testButtoni);
             }
-            TestLabel testlabel = new TestLabel("ラベルです", 10, 300, 100, 500);
-            Controls.Add(testlabel);
+          _testlabel = new TestLabel("ラベルです", 10, 300, 100, 500);
+            Controls.Add(_testlabel);
 
             //Label label = new Label();
             ///label.Location = new Point(39,400);
             //label.Text = "ラベルです";
 
             //Controls.Add(label);
+        }
+        public void LabelTextUpdate(string str)
+        {
+            _testlabel.TextUpdate(str);
         }
     }
 }
