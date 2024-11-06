@@ -29,10 +29,18 @@ namespace CS_Form
             for (i = 0;i < 10; i++)
             {
                
-                TestButton testButtoni = new TestButton(i,(i%3)*100,(i/3)*100,100, 100);
+                TestButton testButtoni = new TestButton(i,(i%5)*100,(i/5)*100,100, 100);
 
                   Controls.Add(testButtoni);
             }
+            TestLabel testlabel = new TestLabel("ラベルです", 10, 300, 100, 500);
+            Controls.Add(testlabel);
+
+            //Label label = new Label();
+            ///label.Location = new Point(39,400);
+            //label.Text = "ラベルです";
+
+            //Controls.Add(label);
         }
     }
 }
