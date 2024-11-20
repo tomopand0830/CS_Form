@@ -37,6 +37,10 @@ namespace CS_Form
        
         public  void Onclick(object sender,EventArgs s)
         {
+            string t = _form1.ReplacementButtonLabel(Text);
+
+            Text = t;
+
             _form1.labelTextUpdate(Text);
         }
 

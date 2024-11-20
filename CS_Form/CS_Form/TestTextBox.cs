@@ -22,10 +22,13 @@ namespace CS_Form
             
 
         }
-
-        public void TextUpdate(string str)
+        public string TextReplacement(string str)
         {
+            string temp = Text;
+
             Text = str;
+            return temp;
         }
+       
     }
 }

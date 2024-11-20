@@ -40,14 +40,11 @@ namespace CS_Form
           _testlabel = new TestLabel("ラベルです", 10, 300, 100, 500);
             Controls.Add(_testlabel);
 
-            _textBox = new TestTextBox("てきすとぼっくすです", 10, 300, 500, 100);
+            _textBox = new TestTextBox(Text, 150, 300, 500, 100);
 
             Controls.Add(_textBox);
 
-            string TesttextBox = _testlabel.Text;
-            string Testlabel = _textBox.Text;
-            _textBox.Text = _testlabel.Text;
-            _testlabel.Text = _textBox.Text;
+            
             //Label label = new Label();
             ///label.Location = new Point(39,400);
             //label.Text = "ラベルです";
@@ -57,6 +54,13 @@ namespace CS_Form
         public void labelTextUpdate(string str)
         {
             _testlabel.TextUpdate(str); 
+        }
+
+
+        public string ReplacementButtonLabel(string str)
+        {
+           string s =  _textBox.TextReplacement(str);
+            return s;
         }
         
     }
