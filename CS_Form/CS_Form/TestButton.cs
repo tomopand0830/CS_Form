@@ -37,7 +37,7 @@ namespace CS_Form
        
         public  void Onclick(object sender,EventArgs s)
         {
-            _form1.LabelTextUpdate(Text);
+            _form1.labelTextUpdate(Text);
         }
 
 
